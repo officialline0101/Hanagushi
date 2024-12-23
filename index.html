@@ -60,37 +60,39 @@
         }
 
         .visit-buttons,
-        .symptoms,
-        .menu-sections,
-        .irradiations {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
+    .symptoms,
+    .menu-sections,
+    .irradiations {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
 
-        .visit-buttons button,
-        .symptoms button,
-        .menu-sections button,
-        .irradiations button {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-color: #f7f7f7;
-            cursor: pointer;
-            box-sizing: border-box;
-            text-align: center;
-            white-space: nowrap;
-        }
+    .visit-buttons button,
+    .symptoms button,
+    .menu-sections button,
+    .irradiations button {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f7f7f7;
+        cursor: pointer;
+        box-sizing: border-box;
+        text-align: center;
+        white-space: nowrap;
+        font-size: 18px; /* フォントサイズを追加 */
+    }
 
-        .visit-buttons button.active,
-        .symptoms button.active,
-        .menu-sections button.active,
-        .irradiations button.active {
-            background-color: #444;
-            color: #fff;
-        }
+    .visit-buttons button.active,
+    .symptoms button.active,
+    .menu-sections button.active,
+    .irradiations button.active {
+        background-color: #444;
+        color: #fff;
+    }
+
 
         .date-inputs input[type="datetime-local"] {
             width: calc(100% - 22px);
@@ -122,7 +124,7 @@
             position: relative;
             width: 106%;
             /* 横幅を広げる */
-            margin-left: -3%;
+            margin-left: -6%;
             /* 親要素の中心にカレンダーを配置 */
         }
 
@@ -316,7 +318,7 @@
                 <span class="highlight-text">◆カラーメニュー◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">オーガニックカラー<br>（ケアトリートメント・アルカリ除去・<br>褪色防止トリートメント付</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">オーガニックカラー<br>（ケアトリートメント・アルカリ除去・<br>褪色防止トリートメント付）</button>
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">ホイルワーク</button>
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">ヘアマニキュア（イージーブロウ付き）</button>
             </div>
@@ -327,13 +329,13 @@
                 <span class="highlight-text">◆パーマメニュー◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">パーマ（ケアトリートメント・カット・スタイリング込み</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">パーマ（ケアトリートメント・カット・<br>スタイリング込み）</button>
             </div>
         </div>
 
         <div id="Sukumo" class="menu-section">
             <div class="highlight-background">
-                <span class="highlight-text">◆縮毛矯正メニュー◆</span>
+                <span class="highlight-text">◆宿毛矯正メニュー◆</span>
             </div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">ソフトストレート</button>
@@ -357,9 +359,9 @@
             </div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">大人カット<br>(1シャンプー・ブロー・クイックスパ付)</button>
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">高校生カット<br>(ブロー・クイックスパ付)</button>
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">中学生カット<br>(ブロー・クイックスパ付)</button>
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">幼・小学生カット<br>(ブロー・クイックスパ付)</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">高校生カット</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">中学生カット</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">幼・小学生カット</button>
             </div>
         </div>
 
@@ -792,7 +794,7 @@
                 return;
             }
 
-            const url = 'https://script.google.com/macros/s/AKfycbzop2doXOgeQEgJx_iXO-JiOZK7qLJ8y9_N9L5DLGoDTK7AHdyEYUb56pxOoyFNwXVIPA/exec' +
+            const url = 'https://script.google.com/macros/s/AKfycbyimgB7lGSN4AVrs9ecZqn_J3CFY7afOGwHZi1GrtxNrqGvW27KPYWfNJMXB4qS_zEgaA/exec' +
                 `?startTime=${startTime.toISOString()}&endTime=${endTime.toISOString()}`;
 
             try {
