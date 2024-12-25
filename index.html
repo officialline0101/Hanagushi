@@ -318,7 +318,7 @@
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">オーガニックカラー<br>（ケアトリートメント・アルカリ除去・<br>褪色防止トリートメント付）</button>
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">ホイルワーク</button>
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">ヘアマニキュア（イージーブロウ付き）</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">ヘアマニキュア</button>
             </div>
         </div>
 
@@ -336,7 +336,7 @@
                 <span class="highlight-text">◆宿毛矯正メニュー◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">ソフトストレート</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">ソフトストレート＋カット</button>
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">縮毛矯正<br>(ケアトリートメント・カット込み)</button>
             </div>
         </div>
@@ -461,16 +461,16 @@
         let selectedirradiationsTime = 0; // 訪問回数で選択された時間
 
         let menuTimes = {
-            'オーガニックカラー＋カット（ケアトリートメント・スタイリング込）': 180,
-            'オーガニックカラー＋カット＋髪質改善4stepトリートメント（ケアトリートメント・スタイリング込）': 210,
+            'カラーorヘアマニキュア＋カット': 180,
+            'カラーorヘアマニキュア＋カット＋システムトリートメント（ケアトリートメント・スタイリング込）': 210,
             'オーガニックカラー（ケアトリートメント・アルカリ除去・褪色防止トリートメント付': 90,
             'ホイルワーク': 60,
-            'ヘアマニキュア（イージーブロウ付き）': 60,
+            'ヘアマニキュア': 60,
             'パーマ（ケアトリートメント・カット・スタイリング込み': 150,
-            'ソフトストレート': 150,
+            'ソフトストレート＋カット': 150,
             '縮毛矯正(ケアトリートメント・カット込み)': 240,
-            '髪質改善トリートメント3STEPS': 15,
-            '髪質改善トリートメント4STEPS': 20,
+            'システムトリートメント3STEPS': 15,
+            'システムトリートメント4STEPS': 20,
             '大人カット(1シャンプー・ブロー・クイックスパ付)': 60,
             '高校生カット(ブロー・クイックスパ付)': 45,
             '中学生カット(ブロー・クイックスパ付)': 45,
