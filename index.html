@@ -303,8 +303,8 @@
         <div class="label">お客様名※必須</div>
         <input type="text" id="name" placeholder="お名前を入力してください" oninput="saveInput('name')">
 
-        <div class="label">電話番号※任意</div>
-        <input type="tel" id="phone" placeholder="電話番号を入力してください" oninput="saveInput('phone')">
+        <div class="label">携帯電話※必須</div>
+        <input type="tel" id="phone" placeholder="携帯電話を入力してください" oninput="saveInput('phone')">
 
         <div class="label">ご来店回数※任意</div>
         <div class="visit-buttons">
@@ -784,6 +784,11 @@
         return;
     }
 
+    if (!formData.phone) {
+        alert('携帯電話を入力してください。');
+        return;
+    }
+
     if (!formData.selectedSymptom) {
         alert('メニューを選択してください。');
         return;
@@ -797,7 +802,7 @@
     // LINEトークにメッセージを送信
     liff.sendMessages([{
         type: 'text',
-        text: `【予約フォーム】\nお名前：${formData.name}\n電話番号：${formData.phone}\nご来店回数：${formData.visitCount}\nメニュー：${formData.selectedSymptom},${formData.irradiationsCount}\n希望日時：\n ${formData.dates[0]}\nメッセージ：${formData.message}`
+        text: `【予約フォーム】\nお名前：${formData.name}\n携帯電話：${formData.phone}\nご来店回数：${formData.visitCount}\nメニュー：${formData.selectedSymptom},${formData.irradiationsCount}\n希望日時：\n ${formData.dates[0]}\nメッセージ：${formData.message}`
     }]).then(() => {
         /* メッセージ送信成功時の処理 */
         alert('当日キャンセルは無いようにお願いいたします。');
