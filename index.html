@@ -294,6 +294,30 @@
             font-weight: bold;
             /* 太文字に設定 */
         }
+
+.info-text {
+    width: 100vw; /* 画面幅いっぱいに広げる */
+    margin: 20px 0 10px 0; /* 上下だけ余白、左右なし */
+    font-size: 13px;
+    color: #000000;
+    line-height: 1.5;
+    text-align: center;
+    word-wrap: break-word;
+    background-color: #eef9f5;
+    padding: 10px 0; /* 左右のpaddingを0にして中央寄せ */
+    border-radius: 0; /* 丸みを消して端まで広げる */
+    box-sizing: border-box; /* paddingを含めて100%幅に */
+}
+
+/* 携帯端末向け */
+@media (max-width: 768px) {
+    .info-text {
+        font-size: 11.5px;
+        margin-top: -8px;
+        line-height: 2.0;
+    }
+}
+
     </style>
 </head>
 
@@ -329,8 +353,10 @@
                 <span class="highlight-text">◆カラーセットメニュー◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">カラーorヘアマニキュア<br>＋<br>カット</button>
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">カラーorヘアマニキュア<br>＋<br>カット＋システムトリートメント</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="15000">カラーorヘアマニキュア＋カット</button>
+                <div class="info-text">（ケアトリートメント・スタイリング込）<br>所要時間：180分</div>
+                <button type="button" onclick="selectSymptom(this, 'treatment2')" data-price="15000">カラーorヘアマニキュア<br>＋<br>カット<br>＋<br>システムトリートメント</button>
+                <div class="info-text">（ケアトリートメント・スタイリング込）<br>所要時間：210分</div>
             </div>
         </div>
 
@@ -339,9 +365,18 @@
                 <span class="highlight-text">◆カラーメニュー◆</span>
             </div>
             <div class="symptoms">
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">カラーフル<br>＋<br>システムトリートメント</button>
+                <div class="info-text">所要時間：180分</div>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">カラーリタッチ<br>＋<br>システムトリートメント</button>
+                <div class="info-text">所要時間：150分</div>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">質感再整カラーリタッチ</button>
+                <div class="info-text">所要時間：150分</div>
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">オーガニックカラー</button>
+                <div class="info-text">（ケアトリートメント・アルカリ除去・<br>褪色防止トリートメント付）<br>所要時間：90分</div>
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">ホイルワーク</button>
+                <div class="info-text">所要時間：90分</div>
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">ヘアマニキュア</button>
+                <div class="info-text">所要時間：90分</div>
             </div>
         </div>
 
@@ -350,7 +385,10 @@
                 <span class="highlight-text">◆パーマメニュー◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">パーマ（ケアトリートメント・カット・<br>スタイリング込み）</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">パーマ＋システムトリートメント</button>
+                <div class="info-text">所要時間：150分</div>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">パーマ</button>
+                <div class="info-text">（ケアトリートメント・カット・スタイリング込み）<br>所要時間：150分</div>
             </div>
         </div>
 
@@ -360,7 +398,9 @@
             </div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">ソフトストレート＋カット</button>
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">縮毛矯正<br>(ケアトリートメント・カット込み)</button>
+                <div class="info-text">所要時間：150分</div>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">縮毛矯正</button>
+                <div class="info-text">(ケアトリートメント・カット込み)<br>所要時間：240分</div>
             </div>
         </div>
 
@@ -370,7 +410,9 @@
             </div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">システムトリートメント3STEPS</button>
+                <div class="info-text">所要時間：30分</div>
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">システムトリートメント4STEPS</button>
+                <div class="info-text">所要時間：40分</div>
             </div>
         </div>
 
@@ -379,10 +421,16 @@
                 <span class="highlight-text">◆カットメニュー◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">大人カット<br>(1シャンプー・ブロー・クイックスパ付)</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">カット＋ミニスパ10min</button>
+                <div class="info-text">所要時間：120分</div>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">大人カット</button>
+                <div class="info-text">(1シャンプー・ブロー・クイックスパ付)<br>所要時間：80分</div>
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">高校生カット</button>
+                <div class="info-text">所要時間：60分</div>
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">中学生カット</button>
+                <div class="info-text">所要時間：60分</div>
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">幼・小学生カット</button>
+                <div class="info-text">所要時間：60分</div>
             </div>
         </div>
 
@@ -391,7 +439,8 @@
                 <span class="highlight-text">◆ヘッドスパ◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-price="15000">オーガニッククリームスパ<br>(ドライ・肩マッサージ込)</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">オーガニッククリームスパ</button>
+                <div class="info-text">(ドライ・肩マッサージ込)<br>所要時間：60分</div>
             </div>
         </div>
 
@@ -401,6 +450,7 @@
             </div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this)" data-price="15000">シャンプーブローorアップ</button>
+                <div class="info-text">所要時間：60分</div>
             </div>
         </div>
 
@@ -478,27 +528,32 @@
 
         // 訪問回数ごとの時間設定 (例：初めて=20分、2回目以降=15分)
         let irradiationsTimes = {
-            '美白パック〈30分〉': 0
+            '美白パック': 0
         };
 
         let selectedirradiationsTime = 0; // 訪問回数で選択された時間
 
         let menuTimes = {
-            'カラーorヘアマニキュア＋カット（ケアトリートメント・スタイリング込）': 180,
-            'カラーorヘアマニキュア＋カット＋システムトリートメント（ケアトリートメント・スタイリング込）': 210,
+            'カラーorヘアマニキュア＋カット': 180,
+            'カラーorヘアマニキュア＋カット＋システムトリートメント': 210,
+            'カラーフル＋システムトリートメント': 180,
+            'カラーリタッチ＋システムトリートメント': 150,
+            '質感再整カラーリタッチ': 150,
             'オーガニックカラー': 90,
             'ホイルワーク': 90,
             'ヘアマニキュア': 90,
-            'パーマ（ケアトリートメント・カット・スタイリング込み）': 150,
+            'パーマ＋システムトリートメント': 150,
+            'パーマ': 150,
             'ソフトストレート＋カット': 150,
-            '縮毛矯正(ケアトリートメント・カット込み)': 240,
+            '縮毛矯正': 240,
             'システムトリートメント3STEPS': 30,
             'システムトリートメント4STEPS': 40,
-            '大人カット(1シャンプー・ブロー・クイックスパ付)': 80,
+            'カット＋ミニスパ10min': 120,
+            '大人カット': 80,
             '高校生カット': 60,
             '中学生カット': 60,
             '幼・小学生カット': 60,
-            'オーガニッククリームスパ(ドライ・肩マッサージ込)': 60,
+            'オーガニッククリームスパ': 60,
             'シャンプーブローorアップ': 60
         };
 
