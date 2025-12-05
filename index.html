@@ -318,6 +318,31 @@
     }
 }
 
+.info-textmemo {
+    width: 90%;            /* 画面の90%の幅 */
+    max-width: 600px;      /* PCでは幅が広すぎないように制限 */
+    margin: 20px auto;     /* 左右 auto で中央寄せ */
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #000;
+    line-height: 1.6;
+    text-align: center;
+    word-wrap: break-word;
+    background-color: #eef9f5;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* スマホ向け最適化 */
+@media (max-width: 768px) {
+    .info-textmemo {
+        width: 95%;
+        font-size: 12.5px;
+        padding: 10px 14px;
+        line-height: 1.8;
+    }
+}
+
     </style>
 </head>
 
@@ -490,7 +515,7 @@
 
         <div class="label">ご予約内容</div>
         <div id="displayInfo"></div> <!-- ここに選択された情報を表示します -->
-
+<div class="info-textmemo">施術日から24時間以内の予約はキャンセルできません。</div>
         <button class="submit-button" onclick="submitForm()">予約を行う</button>
     </div>
 
