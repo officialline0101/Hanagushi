@@ -553,6 +553,8 @@
                     <span class="highlight-text">◆カットメニュー◆</span>
                 </div>
                 <div class="symptoms">
+                    <button type="button" onclick="selectSymptom(this)" data-price="15000">カット➕トリートメント</button>
+                    <div class="info-text">所要時間：120分</div>
                     <button type="button" onclick="selectSymptom(this)" data-price="15000">カット＋ミニスパ10min</button>
                     <div class="info-text">所要時間：120分</div>
                     <button type="button" onclick="selectSymptom(this)" data-price="15000">大人カット</button>
@@ -663,6 +665,7 @@
         let irradiationsTimes = { '美白パック': 0 };
         let selectedirradiationsTime = 0; 
         let menuTimes = {
+            'カット➕トリートメント': 120,
             'カラーorヘアマニキュア＋カット': 180,
             'カット＋質感再整カラー': 210, // ▼ 追加
             'カラーフル＋システムトリートメント': 180,
