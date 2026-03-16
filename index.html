@@ -170,15 +170,15 @@
         }
 
         /* 各ボタンのアイコン */
-        .menu-sections button:nth-child(1)::before { content: "\f0d0"; } /* magic */
-        .menu-sections button:nth-child(2)::before { content: "\f53f"; } /* palette */
-        .menu-sections button:nth-child(3)::before { content: "\f72e"; } /* wind */
-        .menu-sections button:nth-child(4)::before { content: "\e2ca"; } /* wand-sparkles */
-        .menu-sections button:nth-child(5)::before { content: "\e06b"; } /* pump-soap */
-        .menu-sections button:nth-child(6)::before { content: "\f0c4"; } /* scissors */
-        .menu-sections button:nth-child(7)::before { content: "\f5bb"; } /* spa */
-        .menu-sections button:nth-child(8)::before { content: "\f2cc"; } /* shower */
-        .menu-sections button:nth-child(9)::before { content: "\f5a2"; } /* hand-sparkles（髪質改善） */
+        .menu-sections button:nth-child(1)::before { content: "\f0d0"; } /* magic（カラーセット） */
+        .menu-sections button:nth-child(2)::before { content: "\f5a2"; } /* hand-sparkles（髪質改善） */
+        .menu-sections button:nth-child(3)::before { content: "\f53f"; } /* palette（カラー） */
+        .menu-sections button:nth-child(4)::before { content: "\f72e"; } /* wind（パーマ） */
+        .menu-sections button:nth-child(5)::before { content: "\e2ca"; } /* wand-sparkles（縮毛矯正） */
+        .menu-sections button:nth-child(6)::before { content: "\e06b"; } /* pump-soap（トリートメント） */
+        .menu-sections button:nth-child(7)::before { content: "\f0c4"; } /* scissors（カット） */
+        .menu-sections button:nth-child(8)::before { content: "\f5bb"; } /* spa（ヘッドスパ） */
+        .menu-sections button:nth-child(9)::before { content: "\f2cc"; } /* shower（シャンプー・ブロウ） */
 
         /* ホバー・アクティブ */
         .menu-sections button:hover {
@@ -472,6 +472,7 @@
             
             <div class="menu-sections">
                 <button type="button" onclick="showMenu('set')">カラーセットメニュー</button>
+                <button type="button" onclick="showMenu('kaizen')">髪質改善メニュー</button>
                 <button type="button" onclick="showMenu('color')">カラーメニュー</button>
                 <button type="button" onclick="showMenu('perm')">パーマメニュー</button>
                 <button type="button" onclick="showMenu('Sukumo')">縮毛矯正メニュー</button>
@@ -479,7 +480,6 @@
                 <button type="button" onclick="showMenu('cut')">カットメニュー</button>
                 <button type="button" onclick="showMenu('headspa')">ヘッドスパ</button>
                 <button type="button" onclick="showMenu('shampoo')">シャンプー・ブロウ</button>
-                <button type="button" onclick="showMenu('kaizen')">髪質改善メニュー</button>
             </div>
 
             <div id="set" class="menu-section">
