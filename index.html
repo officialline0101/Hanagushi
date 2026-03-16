@@ -178,6 +178,7 @@
         .menu-sections button:nth-child(6)::before { content: "\f0c4"; } /* scissors */
         .menu-sections button:nth-child(7)::before { content: "\f5bb"; } /* spa */
         .menu-sections button:nth-child(8)::before { content: "\f2cc"; } /* shower */
+        .menu-sections button:nth-child(9)::before { content: "\f5a2"; } /* hand-sparkles（髪質改善） */
 
         /* ホバー・アクティブ */
         .menu-sections button:hover {
@@ -478,6 +479,7 @@
                 <button type="button" onclick="showMenu('cut')">カットメニュー</button>
                 <button type="button" onclick="showMenu('headspa')">ヘッドスパ</button>
                 <button type="button" onclick="showMenu('shampoo')">シャンプー・ブロウ</button>
+                <button type="button" onclick="showMenu('kaizen')">髪質改善メニュー</button>
             </div>
 
             <div id="set" class="menu-section">
@@ -489,12 +491,7 @@
                     <div class="info-text">（ケアトリートメント・スタイリング込）<br>所要時間：180分</div>
                     <button type="button" onclick="selectSymptom(this, 'treatment2')" data-price="15000">カラーorヘアマニキュア<br>＋<br>カット<br>＋<br>システムトリートメント</button>
                     <div class="info-text">（ケアトリートメント・スタイリング込）<br>所要時間：210分</div>
-                    <button type="button" onclick="selectSymptom(this, 'treatment3')" data-price="15000">カット+質感再整カラー</button>
-                    <div class="info-text">所要時間：210分</div>
-                    <button type="button" onclick="selectSymptom(this, 'treatment4')" data-price="15000">カット+質感再整パーマ</button>
-                    <div class="info-text">所要時間：210分</div>
-                    <button type="button" onclick="selectSymptom(this, 'treatment5')" data-price="15000">カット+質感再整縮毛矯正</button>
-                    <div class="info-text">所要時間：210分</div>
+
                     <button type="button" onclick="selectSymptom(this, 'treatment6')" data-price="15000">カラーorヘアマニキュア<br>＋<br>システムトリートメント</button>
                     <div class="info-text">所要時間：210分</div>
                 </div>
@@ -591,6 +588,20 @@
                 <div class="symptoms">
                     <button type="button" onclick="selectSymptom(this)" data-price="15000">シャンプーブローorアップ</button>
                     <div class="info-text">所要時間：60分</div>
+                </div>
+            </div>
+
+            <div id="kaizen" class="menu-section">
+                <div class="highlight-background">
+                    <span class="highlight-text">◆髪質改善メニュー◆</span>
+                </div>
+                <div class="symptoms">
+                    <button type="button" onclick="selectSymptom(this, 'treatment3')" data-price="15000">カット+質感再整カラー</button>
+                    <div class="info-text">所要時間：210分</div>
+                    <button type="button" onclick="selectSymptom(this, 'treatment4')" data-price="15000">カット+質感再整パーマ</button>
+                    <div class="info-text">所要時間：210分</div>
+                    <button type="button" onclick="selectSymptom(this, 'treatment5')" data-price="15000">カット+質感再整縮毛矯正</button>
+                    <div class="info-text">所要時間：210分</div>
                 </div>
             </div>
             
